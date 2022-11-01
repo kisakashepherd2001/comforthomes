@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Downloads/Compressed/modern-flat-design-login-form/User registration form"
+		},
+		{
+			"path": "../images"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "realestate"
+	}
+}
