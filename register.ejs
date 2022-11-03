@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <title>Register</title>
+</head>
+<body>
+
+    <form action="/users/register"  method="POST">
+    <h3>Create Account</h3>
+    <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name*" required>
+    </div>
+    <div>
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email" placeholder="Enter email " required>
+    </div>
+    <div>
+        <label for="tel">Telephone</label>
+        <input type="phone" name="tel" id="tel" placeholder="+254" required>
+    </div>
+    <div>
+        <label for="psw">Password</label>
+        <input type="password" name="psw" id="psw" placeholder="Enter Password" required>
+    </div>
+
+    <div>
+        <label for="psw2">Confirm password</label>
+        <input type="password" name="psw2" id="psw2" placeholder="Confirm Password" required>
+    </div>
+      <div>
+        <input type="submit" value="Register">
+      </div>
+      <a href="/users/login"><span>Already Have an account?</span>Sign In</a>
+
+      <ul>
+        <% if (typeof errors != 'undefined') { %> <% errors.forEach(error=>{ %>
+        <li><%= error.message %></li>
+        <% }) %> <% } %>
+
+      </ul>
+    </div>
+    </form>
+    
+</body>
+</html>
